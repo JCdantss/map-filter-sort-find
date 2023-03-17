@@ -14,7 +14,11 @@ const alunas = [
 
 
 //1) FUNCAO PARA CALCUCAR MEDIAS DAS ALUNAS
+const medias = () =>{
+return alunas.map(aluna => aluna.prova)
+}
 
+console.log(medias())
 
 //==================================================================
 
