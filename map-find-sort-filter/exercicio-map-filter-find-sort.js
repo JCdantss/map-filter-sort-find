@@ -12,16 +12,24 @@ const alunas = [
 ]
 
 //1) FUNCAO PARA CALCUCAR MEDIAS DAS ALUNAS
-const medias = (alunas) =>{
-return alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
+
+//-Criamos a funcao media para imprimir tudo no console.
+//-Mapeamos a funcao alunas, e somamos os resultados das provas e dividimos
+//pela quantidade de provas.
+const medias = () =>{
+const mediasAlunas = alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
+return mediasAlunas
 }
-console.log(medias(alunas))
+console.log(medias())
 
 //==================================================================
 
 //2) FUNCAO CORINGA PARA CALCULAR MEDIAS
-
- //talvez uma funcao de media que retorne true ou flase tipo essa aqui da linha 24
+//talvez uma funcao de media que retorne true ou flase tipo essa aqui da linha 24
+const aprovado = (alunas, media) => {
+  return alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)) >= media ? true : false)
+}
+console.log(aprovado(alunas, 6))
 
 //==================================================================
 
