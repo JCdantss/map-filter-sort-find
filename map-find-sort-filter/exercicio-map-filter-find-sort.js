@@ -1,4 +1,3 @@
-
 const alunas = [
     { nome: "Ashley", prova: { p1: 5.6, p2: 6.7, p3: 9 } },
     { nome: "Sabrina", prova: { p1: 6.3, p2: 7.5, p3: 10 } },
@@ -12,13 +11,11 @@ const alunas = [
     { nome: "Jane Kelly", prova: { p1: 7, p2: 5.5, p3: 9.1 } },
 ]
 
-
 //1) FUNCAO PARA CALCUCAR MEDIAS DAS ALUNAS
-const medias = () =>{
-return alunas.map(aluna => aluna.prova)
+const medias = (alunas) =>{
+return alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
 }
-
-console.log(medias())
+console.log(medias(alunas))
 
 //==================================================================
 
