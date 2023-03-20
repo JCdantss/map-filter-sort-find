@@ -20,22 +20,34 @@ const medias = () =>{
 const mediasAlunas = alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
 return mediasAlunas
 }
-console.log(medias())
 
+console.log(medias().map(aluna=> aluna + 2))
 //==================================================================
 
 //2) FUNCAO CORINGA PARA CALCULAR MEDIAS
 //talvez uma funcao de media que retorne true ou flase tipo essa aqui da linha 24
-const aprovado = (alunas, media) => {
-  return alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)) >= media ? true : false)
+const aprovada = (media) => {
+// return alunas.map(aluna => aluna = medias >= media ? true : false)
+if(7.10 >= 6){
+    true
+}else{
+    false
 }
-console.log(aprovado(alunas, 6))
+
+}
+console.log(aprovada(6))
 
 //==================================================================
 
 //3) Fazer uma função que retorne um array de nomes das aprovadas
-
-
+//const aprovadas = (media) =>{
+    ///for (let i = 0;  alunas < array.lengt; i++){
+       // const alunasAprovadas = alunas.map(aluna => (aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)
+        
+   // }
+//}
+//console.log(aprovadas())
+//const alunasAprovadas = alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)) >= media ? true : )
 //==================================================================
 
 //4) Fazer uma função que retorne um array de nome das reprovadas
