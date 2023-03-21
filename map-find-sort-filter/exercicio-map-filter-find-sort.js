@@ -17,35 +17,36 @@ const alunas = [
 //-Mapeamos a funcao alunas, e somamos os resultados das provas e dividimos
 //pela quantidade de provas.
 
-const medias = () =>{
+const medias = (alunas) =>{
 const mediasAlunas = alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
 return mediasAlunas
 }
-console.log(medias())
+//console.log(medias(alunas))
 //==================================================================
 
 //2) FUNCAO CORINGA PARA CALCULAR MEDIAS
 //talvez uma funcao de media que retorne true ou flase tipo essa aqui da linha 24
 
-//Criamos uma const chamada Media, como uma variavel global, para passar tudo no console.log!
-//Depois criamos uma varivel chamada de medias Alunas, que armazenava, as medias das alunas.
-//E por fim, retornamos tudo!
+//Criamos uma variavel, chamada aprovada, com um parametro para desidir a média dos alunos.
+//Depois criamos um variavel, que recebia a media, mapeada, que dentro do mapeamento, passamos um Number, para varer a string
+//E depois retornamos tudo, passando por uma verificacao!
+//E dai passamos por console.log()!
 const aprovada = (mediaEscolar) => {
   const arrayNumero = medias().map(Number)
   return arrayNumero.map(notaAluna => notaAluna >= mediaEscolar ? true : false)
 }
-console.log(aprovada(1))
+//console.log(aprovada(6))
 //==================================================================
 
-//3) Fazer uma função que retorne um array de nomes das aprovadas
-//const aprovadas = (media) =>{
-    ///for (let i = 0;  alunas < array.lengt; i++){
-       // const alunasAprovadas = alunas.map(aluna => (aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)
-        
-   // }
+//3) Fazer uma função que retorne um array de nomes das aprovada
+//console.log(test(alunas))
+//const alunasAprovadas = () =>{
+//const test = alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) /3).toFixed(2)))
+//return test.filter(notas => notas >= 6? notas.nome : false)
 //}
-//console.log(aprovadas())
-//const alunasAprovadas = alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2)) >= media ? true : )
+//console.log(alunasAprovadas())
+
+
 //==================================================================
 
 //4) Fazer uma função que retorne um array de nome das reprovadas
@@ -76,3 +77,6 @@ console.log(aprovada(1))
 //==================================================================
 
 //9) Fazer uma função que retorne a media de toda a turma
+
+
+
