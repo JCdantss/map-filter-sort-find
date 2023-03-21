@@ -39,12 +39,18 @@ const aprovada = (mediaEscolar) => {
 //==================================================================
 
 //3) Fazer uma função que retorne um array de nomes das aprovada
-//console.log(test(alunas))
-//const alunasAprovadas = () =>{
-//const test = alunas.map(aluna => (((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) /3).toFixed(2)))
-//return test.filter(notas => notas >= 6? notas.nome : false)
-//}
-//console.log(alunasAprovadas())
+
+const adicionandoAlunas = (aluna) => {
+  const notasAlunas = alunas.map(aluna => {
+    return {
+        nome: aluna.nome,
+        nota: media(aluna.prova)
+    }
+})
+return notasAlunas
+}
+console.log(adicionandoAlunas())
+console.log(alunas)
 
 
 //==================================================================
