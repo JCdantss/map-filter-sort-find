@@ -16,6 +16,9 @@ const alunas = [
 //-Criamos a funcao media para imprimir tudo no console.
 //-Mapeamos a funcao alunas, e somamos os resultados das provas e dividimos
 //pela quantidade de provas.
+//Criamos uma const chamada Media, como uma variavel global, para passar tudo no console.log!
+//Depois criamos uma varivel chamada de medias Alunas, que armazenava, as medias das alunas.
+//E por fim, retornamos tudo!
 const medias = () =>{
 const mediasAlunas = alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
 return mediasAlunas
