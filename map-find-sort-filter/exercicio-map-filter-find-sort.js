@@ -16,30 +16,25 @@ const alunas = [
 //-Criamos a funcao media para imprimir tudo no console.
 //-Mapeamos a funcao alunas, e somamos os resultados das provas e dividimos
 //pela quantidade de provas.
-//Criamos uma const chamada Media, como uma variavel global, para passar tudo no console.log!
-//Depois criamos uma varivel chamada de medias Alunas, que armazenava, as medias das alunas.
-//E por fim, retornamos tudo!
+
 const medias = () =>{
 const mediasAlunas = alunas.map(aluna => ((aluna.prova.p1 + aluna.prova.p2  + aluna.prova.p3) / 3).toFixed(2))
 return mediasAlunas
 }
-
-console.log(medias().map(aluna=> aluna + 2))
+console.log(medias())
 //==================================================================
 
 //2) FUNCAO CORINGA PARA CALCULAR MEDIAS
 //talvez uma funcao de media que retorne true ou flase tipo essa aqui da linha 24
-const aprovada = (media) => {
-// return alunas.map(aluna => aluna = medias >= media ? true : false)
-if(7.10 >= 6){
-    true
-}else{
-    false
-}
 
+//Criamos uma const chamada Media, como uma variavel global, para passar tudo no console.log!
+//Depois criamos uma varivel chamada de medias Alunas, que armazenava, as medias das alunas.
+//E por fim, retornamos tudo!
+const aprovada = (mediaEscolar) => {
+  const arrayNumero = medias().map(Number)
+  return arrayNumero.map(notaAluna => notaAluna >= mediaEscolar ? true : false)
 }
-console.log(aprovada(6))
-
+console.log(aprovada(1))
 //==================================================================
 
 //3) Fazer uma função que retorne um array de nomes das aprovadas
