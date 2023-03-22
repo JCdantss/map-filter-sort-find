@@ -77,6 +77,10 @@ const NomeReprovadas = adicionandoAlunas(alunas)
 //==================================================================
 
 //5) Fazer uma função que retorne um array de objetos:
+//-Criamos uma funcao e retornamos o alunas mapeando e quardando detro de uma constante
+//-Ja dentro do mapeamento retornamos dois objetos onde estamos guardando o nome e a provas
+//e retornamos a contante passando o objeto por parametro.
+
 const catalogoDeAlunas = (aluna) =>{
   const addAlunas = aluna.map((aluna) =>{
     return{
