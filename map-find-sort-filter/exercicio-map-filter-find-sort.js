@@ -44,13 +44,13 @@ const adicionandoAlunas = (aluna) => {
   const notasAlunas = alunas.map(aluna => {
     return {
         nome: aluna.nome,
-        nota: media(aluna.prova)
+        nota: ((((aluna.prova.p1 + aluna.prova.p2) + aluna.prova.p3) / 3).toFixed(2))
     }
 })
-return notasAlunas
+return notasAlunas.filter(nota => nota.nota >= 6).map(nome => nome.nome)
 }
 console.log(adicionandoAlunas())
-console.log(alunas)
+
 
 
 //==================================================================
