@@ -129,7 +129,7 @@ const maiorNota = (cresente) => {
   })
   return nomeAlunas[0].nome
 }
- console.log(maiorNota(ordenacao(catalogoDeAlunas(alunas))))
+//  console.log(maiorNota(ordenacao(catalogoDeAlunas(alunas))))
 
 //==================================================================
 
@@ -143,8 +143,8 @@ const maiorNota = (cresente) => {
 //Por fim retornamos a constante com o resultado, mais ela venho junto a um array dentro de um objeto
 //Dai por fim, passamos a posiçao zero dentro de um colchetes => [0], e chamos o nome dentro do objeto,
 //Obtendo o resultado final!
-const menorNota = () => {
-  const alunaMenorNota = ordenacao().shift()
+const menorNota = (crescente) => {
+  const alunaMenorNota = crescente.shift()
   const nomeAlunas = catalogoDeAlunas(alunas).filter((nota) => {
     if (nota.prova === alunaMenorNota) {
       return nota.nome
@@ -152,7 +152,7 @@ const menorNota = () => {
   })
   return nomeAlunas[0].nome
 }
- //console.log(menorNota())
+ console.log(menorNota(ordenacao(catalogoDeAlunas(alunas))))
 //==================================================================
 
 //9) Fazer uma função que retorne a media de toda a turma.
