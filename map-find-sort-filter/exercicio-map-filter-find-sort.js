@@ -77,7 +77,7 @@ const NomeReprovadas = adicionandoAlunas(alunas)
 //==================================================================
 
 //5) Fazer uma função que retorne um array de objetos:
-//-Criamos uma funcao e retornamos o alunas mapeando e quardando detro de uma constante
+//-Criamos uma funcao e retornamos as alunas mapeando e guardando detro de uma constante
 //-Ja dentro do mapeamento retornamos dois objetos onde estamos guardando o nome e a provas
 //e retornamos a contante passando o objeto por parametro.
 
@@ -85,7 +85,8 @@ const catalogoDeAlunas = (aluna) =>{
   const addAlunas = aluna.map((aluna) =>{
     return{
       nome: aluna.nome,
-      prova: aluna.prova
+      prova: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(2),
+      Resultado: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(2) >= 7 ? "Aprovada"  : "Reprovada"
     }
   })
   return addAlunas
