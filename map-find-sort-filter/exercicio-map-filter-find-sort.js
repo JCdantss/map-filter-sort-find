@@ -94,8 +94,8 @@ const catalogoDeAlunas = (aluna) => {
           ? "Aprovada"
           : "Reprovada",
     };
-  });
-  return addAlunas;
+  })
+  return addAlunas
 };
 // console.log(catalogoDeAlunas(alunas))
 
@@ -106,12 +106,10 @@ const catalogoDeAlunas = (aluna) => {
 //Depois retornamos, o exercicio acima, mapeando as notas, e passando um sort,
 //para ordennar eles do menor pro maior!
 //Por fim, chamamos a constante no console.log().
-const ordenacao = () => {
-  return catalogoDeAlunas(alunas)
-    .map((notas) => notas.prova)
-    .sort();
-};
-//console.log(ordenacao())
+const ordenacao = (mapeando) => {
+  return mapeando.map((notas) => notas.prova).sort()
+}
+console.log(ordenacao(catalogoDeAlunas(alunas)))
 
 //==================================================================
 
@@ -156,7 +154,11 @@ const menorNota = () => {
 // console.log(menorNota())
 //==================================================================
 
-//9) Fazer uma função que retorne a media de toda a turma
+//9) Fazer uma função que retorne a media de toda a turma.
+//-Criamos a funcao e dentro passamos uma cosnt para mapear e puxar somente as notas.
+//-Apos criamos outra para transformalas em numeros.
+//-Depois usamos o reduce para somalas entre si.
+//-Por fim restornamos o resultado divindo pelo total de alunas removendo as casas decimais.
 const mediaTurma = () =>{
  const mediaAlunas = catalogoDeAlunas(alunas).map(nota => nota.prova)
  const notas = mediaAlunas.map(Number)
@@ -165,4 +167,4 @@ const mediaTurma = () =>{
 
   return  (somaNotas / mediaAlunas.length).toFixed(1)
 }
-console.log(mediaTurma())
+// console.log(mediaTurma())
