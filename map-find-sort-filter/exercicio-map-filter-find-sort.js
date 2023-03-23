@@ -95,7 +95,11 @@ console.log(catalogoDeAlunas(alunas))
 
 //==================================================================
 
-//6) ordenar as notas das alunas
+//6) ordenar as notas das alunas 
+const ordenacao = () =>{
+ return  catalogoDeAlunas(alunas).map(notas => notas.prova).sort()
+} 
+console.log(ordenacao())
 
 //==================================================================
 
