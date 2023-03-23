@@ -160,12 +160,12 @@ const menorNota = (crescente) => {
 //-Apos criamos outra para transformalas em numeros.
 //-Depois usamos o reduce para somalas entre si.
 //-Por fim restornamos o resultado divindo pelo total de alunas removendo as casas decimais.
-const mediaTurma = () =>{
- const mediaAlunas = catalogoDeAlunas(alunas).map(nota => nota.prova)
+const mediaTurma = (informaçoesAlunas) =>{
+ const mediaAlunas = informaçoesAlunas.map(nota => nota.prova)
  const notas = mediaAlunas.map(Number)
  const somaNotas = notas.reduce(
   (armazena, oQueArmazena) => armazena + oQueArmazena)
 
   return  (somaNotas / mediaAlunas.length).toFixed(1)
 }
-// console.log(mediaTurma())
+ console.log(mediaTurma(catalogoDeAlunas(alunas)))
