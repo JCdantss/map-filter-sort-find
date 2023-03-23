@@ -87,24 +87,38 @@ const catalogoDeAlunas = (aluna) =>{
     return{
       nome: aluna.nome,
       prova: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(2),
-      Resultado: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(2) >= 7 ? "Aprovada"  : "Reprovada"
+      Resultado: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(2) >= 6 ? "Aprovada"  : "Reprovada"
     }
   })
   return addAlunas
 }
-console.log(catalogoDeAlunas(alunas))
+//console.log(catalogoDeAlunas(alunas))
 
 //===================================================================
 
 //6) ordenar as notas das alunas 
+//Criamos a constante ordenação, como uma variavel global.
+//Depois retornamos, o exercicio acima, mapeando as notas, e passando um sort,
+//para ordennar eles do menor pro maior!
+//Por fim, chamamos a constante no console.log().
 const ordenacao = () =>{
  return  catalogoDeAlunas(alunas).map(notas => notas.prova).sort()
 } 
-console.log(ordenacao())
+//console.log(ordenacao())
 
 //==================================================================
 
 //7) Fazer uma função que retorne o nome da aluna com maior nota
+const maiorNota = () =>{
+  const alunaMaiorNota = ordenacao().pop()
+  const nomeAlunas = catalogoDeAlunas(alunas).filter(nota => {
+    if(nota.prova === alunaMaiorNota){
+      return nota.nome
+    }
+  })
+  return nomeAlunas[0].nome
+}
+console.log(maiorNota())
  
 //==================================================================
 
