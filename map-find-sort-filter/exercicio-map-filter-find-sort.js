@@ -77,6 +77,7 @@ const NomeReprovadas = adicionandoAlunas(alunas)
 //==================================================================
 
 //5) Fazer uma função que retorne um array de objetos:
+
 //-Criamos uma funcao e retornamos as alunas mapeando e guardando detro de uma constante
 //-Ja dentro do mapeamento retornamos dois objetos onde estamos guardando o nome e a provas
 //e retornamos a contante passando o objeto por parametro.
@@ -93,7 +94,7 @@ const catalogoDeAlunas = (aluna) =>{
 }
 console.log(catalogoDeAlunas(alunas))
 
-//==================================================================
+//===================================================================
 
 //6) ordenar as notas das alunas 
 const ordenacao = () =>{
@@ -104,7 +105,7 @@ console.log(ordenacao())
 //==================================================================
 
 //7) Fazer uma função que retorne o nome da aluna com maior nota
-
+ 
 //==================================================================
 
 //8) Fazer uma função que retorne o nome da aluna com menor nota
