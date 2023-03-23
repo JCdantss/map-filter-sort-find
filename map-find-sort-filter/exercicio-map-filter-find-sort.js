@@ -9,7 +9,7 @@ const alunas = [
   { nome: "Jaqueline", prova: { p1: 3.4, p2: 7.2, p3: 6.8 } },
   { nome: "Alessandra", prova: { p1: 1.4, p2: 2.7, p3: 6.9 } },
   { nome: "Jane Kelly", prova: { p1: 7, p2: 5.5, p3: 9.1 } },
-];
+]
 
 //1) FUNCAO PARA CALCUCAR MEDIAS DAS ALUNAS
 
@@ -20,9 +20,9 @@ const alunas = [
 const medias = (alunas) => {
   const mediasAlunas = alunas.map((aluna) =>
     ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(1)
-  );
-  return mediasAlunas;
-};
+  )
+  return mediasAlunas
+}
 //console.log(medias(alunas))
 //==================================================================
 
@@ -34,11 +34,11 @@ const medias = (alunas) => {
 //E depois retornamos tudo, passando por uma verificacao!
 //E dai passamos por console.log()!
 const aprovada = (mediaEscolar) => {
-  const arrayNumero = medias().map(Number);
+  const arrayNumero = medias().map(Number)
   return arrayNumero.map((notaAluna) =>
     notaAluna >= mediaEscolar ? true : false
-  );
-};
+  )
+}
 //console.log(aprovada(6))
 //==================================================================
 
@@ -53,14 +53,14 @@ const adicionandoAlunas = (alunas) => {
   const notasAlunas = alunas.map((aluna) => {
     return {
       nome: aluna.nome,
-      nota: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(1),
-    };
-  });
-  return notasAlunas;
-};
+      nota: ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(1)
+    }
+  })
+  return notasAlunas
+}
 const NomeAprovadas = adicionandoAlunas(alunas)
   .filter((nome) => nome.nota >= 6)
-  .map((nome) => nome.nome);
+  .map((nome) => nome.nome)
 //console.log(NomeAprovadas)
 
 //=================================================================
@@ -71,7 +71,7 @@ const NomeAprovadas = adicionandoAlunas(alunas)
 
 const NomeReprovadas = adicionandoAlunas(alunas)
   .filter((nome) => nome.nota < 6)
-  .map((nome) => nome.nome);
+  .map((nome) => nome.nome)
 // console.log(NomeReprovadas)
 
 //==================================================================
@@ -92,11 +92,11 @@ const catalogoDeAlunas = (aluna) => {
       Resultado:
         ((aluna.prova.p1 + aluna.prova.p2 + aluna.prova.p3) / 3).toFixed(1) >= 6
           ? "Aprovada"
-          : "Reprovada",
-    };
+          : "Reprovada"
+    }
   })
   return addAlunas
-};
+}
 // console.log(catalogoDeAlunas(alunas))
 
 //===================================================================
@@ -107,9 +107,10 @@ const catalogoDeAlunas = (aluna) => {
 //para ordennar eles do menor pro maior!
 //Por fim, chamamos a constante no console.log().
 const ordenacao = (mapeando) => {
-  return mapeando.map((notas) => notas.prova).sort()
+ return mapeando.map(notas => notas.prova).sort()
+
 }
-console.log(ordenacao(catalogoDeAlunas(alunas)))
+//console.log(ordenacao(catalogoDeAlunas(alunas)))
 
 //==================================================================
 
@@ -119,16 +120,16 @@ console.log(ordenacao(catalogoDeAlunas(alunas)))
 -Depois filtramos o objeto alunas  e fizemos uma verificacao para sabermos a maior nota e retornar o nome.
 -por fim retornamos o array na posicao  zero onde se encontra o nome no objeto.
 */
-const maiorNota = () => {
-  const alunaMaiorNota = ordenacao().pop();
+const maiorNota = (cresente) => {
+  const alunaMaiorNota = cresente.pop()
   const nomeAlunas = catalogoDeAlunas(alunas).filter((nota) => {
     if (nota.prova === alunaMaiorNota) {
-      return nota.nome;
+      return nota.nome
     }
-  });
-  return nomeAlunas[0].nome;
-};
-// console.log(maiorNota())
+  })
+  return nomeAlunas[0].nome
+}
+ console.log(maiorNota(ordenacao(catalogoDeAlunas(alunas))))
 
 //==================================================================
 
@@ -151,7 +152,7 @@ const menorNota = () => {
   })
   return nomeAlunas[0].nome
 }
-// console.log(menorNota())
+ //console.log(menorNota())
 //==================================================================
 
 //9) Fazer uma função que retorne a media de toda a turma.
