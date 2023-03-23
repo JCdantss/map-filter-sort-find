@@ -92,7 +92,7 @@ const catalogoDeAlunas = (aluna) =>{
   })
   return addAlunas
 }
-//console.log(catalogoDeAlunas(alunas))
+// console.log(catalogoDeAlunas(alunas))
 
 //===================================================================
 
@@ -109,6 +109,11 @@ const ordenacao = () =>{
 //==================================================================
 
 //7) Fazer uma função que retorne o nome da aluna com maior nota
+/*
+-Criamos uma funcao que trata uma variavel pegando o ultimo valor ordenado da atividade anterior.
+-Depois filtramos o objeto alunas  e fizemos uma verificacao para sabermos a maior nota e retornar o nome.
+-por fim retornamos o array na posicao  zero onde se encontra o nome no objeto.
+*/
 const maiorNota = () =>{
   const alunaMaiorNota = ordenacao().pop()
   const nomeAlunas = catalogoDeAlunas(alunas).filter(nota => {
@@ -118,12 +123,21 @@ const maiorNota = () =>{
   })
   return nomeAlunas[0].nome
 }
-console.log(maiorNota())
+// console.log(maiorNota())
  
 //==================================================================
 
 //8) Fazer uma função que retorne o nome da aluna com menor nota
-
+const menorNota = () =>{
+  const alunaMenorNota = ordenacao().shift()
+  const nomeAlunas = catalogoDeAlunas(alunas).filter(nota => {
+    if(nota.prova === alunaMenorNota){
+      return nota.nome
+    }
+  })
+  return nomeAlunas[0].nome
+}
+// console.log(menorNota())
 //==================================================================
 
 //9) Fazer uma função que retorne a media de toda a turma
