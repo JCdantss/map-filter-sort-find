@@ -128,6 +128,15 @@ const maiorNota = () =>{
 //==================================================================
 
 //8) Fazer uma função que retorne o nome da aluna com menor nota
+//Criamos a constante menorNota, que servia como um function global!
+//Depois criamos uma constante, que chamava a function de ordenacao, que estava organizada de forma cresente.
+//Usamos o shift(), para pegar o primeiro resultado, pois na atividade queria a menor nota!
+//Depois filtramos o objeto que armazenava as informaçoes das alunas,
+//e comparamos com a  menorNota(function desiguida para encontrar menor nota)
+//Dai se a achasse  a menor nota iria chamar o nome da aluna com menor nota!
+//Por fim retornamos a constante com o resultado, mais ela venho junto a um array dentro de um objeto
+//Dai por fim, passamos a posiçao zero dentro de um colchetes => [0], e chamos o nome dentro do objeto,
+//Obtendo o resultado final!
 const menorNota = () =>{
   const alunaMenorNota = ordenacao().shift()
   const nomeAlunas = catalogoDeAlunas(alunas).filter(nota => {
